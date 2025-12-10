@@ -31,8 +31,8 @@ mainkafkatopic = os.environ['KAFKAPRODUCETOPIC']
 basedir = os.environ['userbasedir'] 
 
 # Set Global Host/Port for VIPER - You may change this to fit your configuration
-VIPERHOST=''
-VIPERPORT=''
+VIPERHOST='https://127.0.0.1'
+VIPERPORT='21003'
 HTTPADDR='https://'
 
 
@@ -63,9 +63,9 @@ if VIPERHOST=="":
 
 # Set personal data
 def datasetup(maintopic,preprocesstopic):
-     companyname="OTICS"
-     myname="Sebastian"
-     myemail="Sebastian.Maurice"
+     companyname="SENECA"
+     myname="Celine"
+     myemail="Celine.Thomas"
      mylocation="Toronto"
 
      # Replication factor for Kafka redundancy
@@ -320,4 +320,5 @@ loop.create_task(spawnvipers())
 asyncio.set_event_loop(loop)
 
 loop.run_forever()
+
 
