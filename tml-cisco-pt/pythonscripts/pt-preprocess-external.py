@@ -31,8 +31,8 @@ mainkafkatopic = os.environ['KAFKAPRODUCETOPIC']
 basedir = os.environ['userbasedir'] 
 
 # Set Global Host/Port for VIPER - You may change this to fit your configuration
-VIPERHOST='https://l27.0.0.1'
-VIPERPORT='8002'
+VIPERHOST='https://172.17.0.3'
+VIPERPORT='44497'
 HTTPADDR='https://'
 
 
@@ -320,6 +320,7 @@ loop.create_task(spawnvipers())
 asyncio.set_event_loop(loop)
 
 loop.run_forever()
+
 
 
 
